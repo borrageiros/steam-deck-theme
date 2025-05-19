@@ -1,0 +1,154 @@
+{
+  "name": "steam-deck-theme",
+  "author": "borrageiros",
+  "version": "v1.0",
+  "description": "Borrageiros personal theme for the steam deck",
+  "target": "System-Wide",
+  "manifest_version": 8,
+  "inject": {
+    "shared.css": [
+      "bigpicture",
+      "QuickAccess",
+      "MainMenu",
+      "SP"
+    ]
+  },
+  "patches": {
+    "Main Color": {
+      "default": "Black",
+      "type": "dropdown",
+      "values": {
+        "Black": {},
+        "Dark Gray": {
+          "colors/dark-gray.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Gray": {
+          "colors/gray.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Red": {
+          "colors/red.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Orange": {
+          "colors/orange.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Yellow": {
+          "colors/yellow.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Green": {
+          "colors/green.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Blue": {
+          "colors/blue.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Indigo": {
+          "colors/indigo.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Violet": {
+          "colors/violet.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Custom": {}
+      },
+      "components": [
+        {
+          "name": "Background Color",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#000",
+          "css_variable": "--obsidian-main-color",
+          "tabs": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "No Friends": {
+      "default": "No",
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "nofriends.css": [
+            "SP"
+          ]
+        }
+      }
+    },
+    "Disable Blur": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "no-blur.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Disable Glow": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "no-glow.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "No": {}
+      }
+    }
+  }
+}
